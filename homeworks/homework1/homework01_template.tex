@@ -157,27 +157,39 @@ X_{ij} = y_{i}^j
 
 You should implement this without a single for loop by using vectorization and broadcast. Here $1 \leq j \leq 50$  and $y  = {-20, -19.9, ..., 20}$. Implement code that generates such a matrix.
 
-\problem{15} You are training a logistic regression model. You initialize the parameters with 0’s. Is this a good idea? Explain your answer.
+\vspace{20pt}
+\noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for undergraduates
+beyond this line
+\problem{15}
+Is this a good idea to initialize parameters with zeros when training
+a logistic regression model? Explain your answer.
 
 Imagine you are training a Logistic Regression. There are few parameters
 
 
 \problem{15}
-According to the class, loss of logistic regression  can be simplified to the following form:
+As discussed in the class, the logistic regression likelihood simplifies to the following form:
 
-\begin{equation}
-  \mbox{cost}(f(x), y)= -y log(f(x)) - (1-y) log(1-f(x))
-\end{equation}
+\begin{align*}
+  \mbox{cost}(f(x), y) &= -y \log(f(x)) - (1-y) \log(1-f(x))\\
+  y & \in \{0, 1\} \mbox{ class label}
+\end{align*}
 
 What will happen when $y = 1$ and $f(x) = 1$? Will this work in actual implementations?
 
+\vspace{20pt}
+\noindent\rule[0.5ex]{0.7\linewidth}{1pt} Extra credit problems
 
 \problem{extra credit 20} % 8
-In these three examples, find the perceptron weights $w_0, w_1, w_2$ for each of them.
-the line that seperates the two classes is given by the decision boundary that divied into positive and negative classes. (No calculations required, you can simply note the answer.)
+In the three examples of Figure~\ref{fig:decision_boundary}, find the perceptron weights $w_0, w_1, w_2$ for each of them.
+The line that separates the two classes is given by the decision boundary that divied into positive and negative classes. (No calculations required, you can simply note the answer.)
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{homework_problem_1.png}
+  \label{fig:decision_boundary}
+  \caption{Binary class data and separating decision boundaries.
+  }
 \end{figure}
 
 \problem{extra credit 20} % 8
