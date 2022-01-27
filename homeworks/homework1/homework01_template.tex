@@ -149,23 +149,19 @@ Given the following data on a 2D plane :
 Fit a linear regression model to the data without the constant term: $y_{i} = \beta x_{i} + \epsilon_{i} $. Give an expression of the minimization problem for finding $\beta$, Show how to compute it's value and show the value
 
 \problem{20}
-Perform a polynomial fitting compute a design matrix  with
+Perform a polynomial fitting to compute a design matrix $X$ such that:
 
 \begin{equation}
 X_{ij} = y_{i}^j
 \end{equation}
 
-You should implement this without a single for loop by using vectorization and broadcast. Here $1 \leq j \leq 50$  and $y  = {-20, -19.9, ..., 20}$. Implement code that generates such a matrix.
+You should implement this \textbf{without a single for loop} by using vectorization and broadcast. Here ($1 \leq j \leq 50$)  and $y  = \{-20, -19.9, ..., 20\}$. Implement code that generates such a matrix.
 
 \vspace{20pt}
 \noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for undergraduates
 beyond this line
 \problem{15}
-Is this a good idea to initialize parameters with zeros when training
-a logistic regression model? Explain your answer.
-
-Imagine you are training a Logistic Regression. There are few parameters
-
+Is this a good idea to initialize parameters with zeros when training a logistic regression model? Explain your answer.
 
 \problem{15}
 As discussed in the class, the logistic regression likelihood simplifies to the following form:
@@ -206,12 +202,7 @@ Here $x, y, z$ are inputs and $a, b, c, d$ are parameters. $\sigma$ is logistic 
 \end{equation}
 Note that E is the function of $a,b,c,d$
 Compute the partial derivative of E with respect to parameters $a, b, d$ i.e $\frac{\partial{E}}{\partial{a}}, \frac{\partial{E}}{\partial{b}}, \frac{\partial{E}}{\partial{d}}$
-
-
 \end{document}
-
-
-
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t
