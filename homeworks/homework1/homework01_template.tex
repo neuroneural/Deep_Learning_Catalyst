@@ -14,21 +14,21 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2
 }
 
@@ -75,36 +75,31 @@
 
 \vspace{20pt}
 
-Note: For all coding problems, you will implement them in a single jupyter notebook.
+Note: All coding problems are to be implemented in a single jupyter notebook.
 
 Note: this is the distribution of questions:
 \begin{enumerate}
-  \item Question 1 to Question 8: Everyone has to attempt.
-  \item Question 9 - Question 10: Only for Graduate Students
+  \item Question 1 to Question 8: Required for everyone.
+  \item Question 9 - Question 10: Required only for Graduate Students
   \item Question 11 - Question 12: Bonus marks
 \end{enumerate}
 
-\problem{5} What is the difference between Root Mean Squared Error (RMSE
-) and Mean Squared Error(MSE) . Describe the context in which they will be most useful? Which of these loss penalises larger differences between the predicted and expected results and why? 
+\problem{5} What is the difference between Root Mean Squared Error (RMSE) and Mean Squared Error(MSE). Describe the context in which they will be most useful? Which of these losses penalizes large differences between the predicted and expected results and why?
 
-
-
-
-\problem{5} Multiple choice question: Which of the following statements is true about the relationship between features and dataset sizes? Choose one of the following and explain the chosen answer
+\problem{5} Which of the following statements is true about the relationship between features and dataset sizes? Choose one of the following and explain the chosen answer
 \begin{enumerate}
   \item When training a model, as you add more features to the dataset, you often need to increase the dataset's size to ensure the model learns reliably.
-  \item When training a model, adding more features to the dataset increases the amount of information you can extract from the dataset. This allows you to use smaller datasets to train the model and still extract good performances from the data.
-  \item When training a learning algorithm, as you decrease the number of features in the dataset, you need to increase the training sample to make up the difference
+  \item When training a model, adding more features to the dataset increases the amount of information you can extract from the dataset. This allows you to use smaller datasets to train the model and still achieve good generalization performances from the training data.
+  \item When training a learning algorithm, as you decrease the number of features in the dataset, you need to increase the training sample size to make up the difference.
   \item When training a learning algorithm, the number of features in your dataset is entirely dependent on the amount of information you can extract from the dataset.
 \end{enumerate}
 
-\problem{4}
-You are building a deep learning model and after some x epochs you found that training loss is decreasing, however, your validation loss is more or less constant. What would be the most likely cause of this and suggestion to rectify it
+\problem{4} You are building a deep learning model and after $X$ epochs you see that the training loss is decreasing, while your validation loss is either constant or increasing. What would be the most likely cause of this and suggestion to rectify it
 \begin{enumerate}
   \item Learning rate is too high
-  \item no Convergence of gradient descent
-  \item Less Training data
-  \item stuck in local minima
+  \item Gradient descent does not converge
+  \item Insufficient training data size
+  \item Gradient descent is stuck in a local minimum
 \end{enumerate}
 
 \problem{4}  Perceptron
@@ -124,66 +119,77 @@ You are building a deep learning model and after some x epochs you found that tr
 \begin{enumerate}
   \item Batch gradient descent is always guaranteed to converge to the global optimum of a loss function.
   \item Stochastic gradient descent is always guaranteed to converge to the global optimum of a loss function.
-  \item For convex loss functions (i.e. with a bowl shape), batch gradient descent is guaranteed to eventually converge to the global optimum while stochastic gradient descent is not.
+  \item For convex loss functions (i.e. with a bowl
+    shape\footnote{More formally $f$ is convex on $[a,b]$ if $\forall
+      \vec{x}_1, \vec{x}_2 \in [a,b]$ if $f(\lambda\vec{x}_1 +
+      (1-\lambda)\vec{x}_2) \le \lambda f(\vec{x}_1) + (1-\lambda) f(\vec{x}_2)$}), batch gradient descent is guaranteed to eventually converge to the global optimum while stochastic gradient descent is not.
   \item For convex loss functions (i.e. with a bowl shape), stochastic gradient descent is guaranteed to eventually converge to the global optimum while batch gradient descent is not.
   \item For convex loss functions (i.e. with a bowl shape), both stochastic gradient descent and batch gradient descent will eventually converge to the global optimum.
   \item For convex loss functions (i.e. with a bowl shape), neither stochastic gradient ndescent nor batch gradient descent are guaranteed to converge to the global optimum.
-  
+
 \end{enumerate}
 
 \problem{5}
-Given the following data on a 2D plane : 
+Given the following data on a 2D plane :
 
 \begin{center}
-  \begin{tabular}{||c c ||} 
+  \begin{tabular}{||r r ||}
    \hline
-   x & y \\ [0.5ex] 
+   x & y \\ [0.5ex]
    \hline\hline
-   -1 & -2  \\ 
+   -1 & -2  \\
    \hline
    1 & -1  \\
    \hline
-   2 & 3 \\[1ex] 
+   2 & 3 \\[1ex]
    \hline
   \end{tabular}
   \end{center}
 
 Fit a linear regression model to the data without the constant term: $y_{i} = \beta x_{i} + \epsilon_{i} $. Give an expression of the minimization problem for finding $\beta$, Show how to compute it's value and show the value
 
-\problem{20} 
-Perform a polynomial fitting compute a design matrix  with
+\problem{20}
+Perform a polynomial fitting to compute a design matrix $X$ such that:
 
 \begin{equation}
 X_{ij} = y_{i}^j
 \end{equation}
 
-You should implement this without a single for loop by using vectorization and broadcast. Here $1 \leq j \leq 50$  and $y  = {-20, -19.9, ..., 20}$. Implement code that generates such a matrix.
+You should implement this \textbf{without a single for loop} by using vectorization and broadcast. Here ($1 \leq j \leq 50$)  and $y  = \{-20, -19.9, ..., 20\}$. Implement code that generates such a matrix.
 
-\problem{15} You are training a logistic regression model. You initialize the parameters with 0’s. Is this a good idea? Explain your answer. 
-
-Imagine you are training a Logistic Regression. There are few parameters 
-
+\vspace{20pt}
+\noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for undergraduates
+beyond this line
+\problem{15}
+Is this a good idea to initialize parameters with zeros when training a logistic regression model? Explain your answer.
 
 \problem{15}
-According to the class, loss of logistic regression  can be simplified to the following form:
+As discussed in the class, the logistic regression likelihood simplifies to the following form:
 
-\begin{equation}
-  cost(f(x), y)= -y⋅log(f(x)) - (1-y)⋅log(1-f(x))
-\end{equation}
+\begin{align*}
+  \mbox{cost}(f(x), y) &= -y \log(f(x)) - (1-y) \log(1-f(x))\\
+  y & \in \{0, 1\} \mbox{ class label}
+\end{align*}
 
 What will happen when $y = 1$ and $f(x) = 1$? Will this work in actual implementations?
 
+\vspace{20pt}
+\noindent\rule[0.5ex]{0.7\linewidth}{1pt} Extra credit problems
 
 \problem{extra credit 20} % 8
-In these three examples, find the perceptron weights $w_0, w_1, w_2$ for each of them. 
-the line that seperates the two classes is given by the decision boundary that divied into positive and negative classes. (No calculations required, you can simply note the answer.)
+In the three examples of Figure~\ref{fig:decision_boundary}, find the perceptron weights $w_0, w_1, w_2$ for each of them.
+The line that separates the two classes is given by the decision boundary that divied into positive and negative classes. (No calculations required, you can simply note the answer.)
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{homework_problem_1.png}
+  \label{fig:decision_boundary}
+  \caption{Binary class data and separating decision boundaries.
+  }
 \end{figure}
 
 \problem{extra credit 20} % 8
-Consider the evaluation of E as given below: 
+Consider the evaluation of E as given below:
 
 \begin{equation}
   E = g(x, y, z) = \sigma(c(ax + by) + dz)
@@ -196,12 +202,7 @@ Here $x, y, z$ are inputs and $a, b, c, d$ are parameters. $\sigma$ is logistic 
 \end{equation}
 Note that E is the function of $a,b,c,d$
 Compute the partial derivative of E with respect to parameters $a, b, d$ i.e $\frac{\partial{E}}{\partial{a}}, \frac{\partial{E}}{\partial{b}}, \frac{\partial{E}}{\partial{d}}$
-
-
 \end{document}
-
-
-
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: t
