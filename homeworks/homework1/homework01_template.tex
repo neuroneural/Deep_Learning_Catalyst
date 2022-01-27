@@ -119,7 +119,10 @@ Note: this is the distribution of questions:
 \begin{enumerate}
   \item Batch gradient descent is always guaranteed to converge to the global optimum of a loss function.
   \item Stochastic gradient descent is always guaranteed to converge to the global optimum of a loss function.
-  \item For convex loss functions (i.e. with a bowl shape), batch gradient descent is guaranteed to eventually converge to the global optimum while stochastic gradient descent is not.
+  \item For convex loss functions (i.e. with a bowl
+    shape\footnote{More formally $f$ is convex on $[a,b]$ if $\forall
+      \vec{x}_1, \vec{x}_2 \in [a,b]$ if $f(\lambda\vec{x}_1 +
+      (1-\lambda)\vec{x}_2) \le \lambdaf(\vec{x}_1) + (1-\lambda) f(\vec{x}_2)$}), batch gradient descent is guaranteed to eventually converge to the global optimum while stochastic gradient descent is not.
   \item For convex loss functions (i.e. with a bowl shape), stochastic gradient descent is guaranteed to eventually converge to the global optimum while batch gradient descent is not.
   \item For convex loss functions (i.e. with a bowl shape), both stochastic gradient descent and batch gradient descent will eventually converge to the global optimum.
   \item For convex loss functions (i.e. with a bowl shape), neither stochastic gradient ndescent nor batch gradient descent are guaranteed to converge to the global optimum.
