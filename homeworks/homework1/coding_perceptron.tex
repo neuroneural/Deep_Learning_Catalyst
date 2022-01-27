@@ -77,18 +77,36 @@
 This assignment involves implementing Perceptron algorithm in Python and testing it on various datasets. The training and test data sets will be uploaded in Moodle. Study how to use Jupyter notebook, scikit, numpy, scipy and matplotlib. Write a general python code that works for every dataset rather than different codes. Submit the executed code in Jupyter notebook. You can write your observations and results using the heading and markdown cells in Jupyter.
 
 \vspace{20pt}
-1. Implement Perceptron algorithm in Python from scratch on the datasets 
+1. Implement Perceptron algorithm in Python from scratch on the datasets (Undergraduate students only).
 
 \begin{enumerate}
 \item   Find the decision boundary using Perceptron algorithm on training data and plot it as shown in Figure 1
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{Classification.png}
+    \includegraphics[width=0.8\textwidth]{code/output.png}
     \caption{Figure 1: Classification}
 \end{figure}
 \item Classify test data and plot the classification results.
 \item Observe the weights obtained and the features of the dataset and report your findings.
 \end{enumerate}
+
+\vspace{20pt}
+
+
+2. Implement Perceptron algorithm and Logistic Regression in Python from scratch on the datasets using CIFAR10 dataset (Graduate students only).
+
+\begin{enumerate}
+  \item  unzip the assignment from  assignment-graduate.zip
+  \item download CIFAR10 dataset by using the following script :
+  \begin{enumerate}
+    \item cd cifar10
+    \item source cifar10$\_$download.sh
+  \end{enumerate} 
+  \item Implement class Perceptron and LogisticRegression in Python from scratch on the datasets using CIFAR10 dataset.
+  \item Observe the weights obtained and the features of the dataset and report your findings.
+  \item submit your csv files for each output given in $output$ directory
+  \item BONUS: Implement the same for multiple iterations and plot the graph
+  \end{enumerate}
 \end{document}
 
 
