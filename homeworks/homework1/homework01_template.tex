@@ -189,19 +189,21 @@ The line that separates the two classes is given by the decision boundary that d
 \end{figure}
 
 \problem{extra credit 20} % 8
-Consider the evaluation of E as given below:
+Consider function $E$ below:
 
-\begin{equation}
-  E = g(x, y, z) = \sigma(c(ax + by) + dz)
-\end{equation}
+\begin{equation*}
+  E = g(x, y, z) = \sigma(c(ax + by) + dz),
+\end{equation*}
 
-Here $x, y, z$ are inputs and $a, b, c, d$ are parameters. $\sigma$ is logistic sigmoid function defined as:
+where $x, y, z$ are input variables and $a, b, c, d$ are parameters. $\sigma$ is the logistic sigmoid function defined as:
 
 \begin{equation}
   \sigma(z) = \frac{1}{1 + e^{-z}}
 \end{equation}
-Note that E is the function of $a,b,c,d$
-Compute the partial derivative of E with respect to parameters $a, b, d$ i.e $\frac{\partial{E}}{\partial{a}}, \frac{\partial{E}}{\partial{b}}, \frac{\partial{E}}{\partial{d}}$
+Note that $E$ is also a function of $a,b,c,d$ and for completeness
+could be written as $E(x,y,z,a,d,c,d)$.
+
+Derive expressions of partial derivatives of $E$ with respect to parameters $a, b, d$ i.e $\frac{\partial{E}}{\partial{a}}, \frac{\partial{E}}{\partial{b}}, \frac{\partial{E}}{\partial{d}}$
 \end{document}
 %%% Local Variables:
 %%% mode: latex
