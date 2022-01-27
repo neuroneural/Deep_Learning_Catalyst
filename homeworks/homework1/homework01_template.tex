@@ -14,21 +14,21 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2
 }
 
@@ -75,17 +75,16 @@
 
 \vspace{20pt}
 
-Note: For all coding problems, you will implement them in a single jupyter notebook.
+Note: All coding problems are to be implemented in a single jupyter notebook.
 
 Note: this is the distribution of questions:
 \begin{enumerate}
-  \item Question 1 to Question 8: Everyone has to attempt.
-  \item Question 9 - Question 10: Only for Graduate Students
+  \item Question 1 to Question 8: Required for everyone.
+  \item Question 9 - Question 10: Required only for Graduate Students
   \item Question 11 - Question 12: Bonus marks
 \end{enumerate}
 
-\problem{5} What is the difference between Root Mean Squared Error (RMSE
-) and Mean Squared Error(MSE) . Describe the context in which they will be most useful? Which of these loss penalises larger differences between the predicted and expected results and why? 
+\problem{5} What is the difference between Root Mean Squared Error (RMSE) and Mean Squared Error(MSE). Describe the context in which they will be most useful? Which of these losses penalizes large differences between the predicted and expected results and why?
 
 
 
@@ -128,29 +127,29 @@ You are building a deep learning model and after some x epochs you found that tr
   \item For convex loss functions (i.e. with a bowl shape), stochastic gradient descent is guaranteed to eventually converge to the global optimum while batch gradient descent is not.
   \item For convex loss functions (i.e. with a bowl shape), both stochastic gradient descent and batch gradient descent will eventually converge to the global optimum.
   \item For convex loss functions (i.e. with a bowl shape), neither stochastic gradient ndescent nor batch gradient descent are guaranteed to converge to the global optimum.
-  
+
 \end{enumerate}
 
 \problem{5}
-Given the following data on a 2D plane : 
+Given the following data on a 2D plane :
 
 \begin{center}
-  \begin{tabular}{||c c ||} 
+  \begin{tabular}{||c c ||}
    \hline
-   x & y \\ [0.5ex] 
+   x & y \\ [0.5ex]
    \hline\hline
-   -1 & -2  \\ 
+   -1 & -2  \\
    \hline
    1 & -1  \\
    \hline
-   2 & 3 \\[1ex] 
+   2 & 3 \\[1ex]
    \hline
   \end{tabular}
   \end{center}
 
 Fit a linear regression model to the data without the constant term: $y_{i} = \beta x_{i} + \epsilon_{i} $. Give an expression of the minimization problem for finding $\beta$, Show how to compute it's value and show the value
 
-\problem{20} 
+\problem{20}
 Perform a polynomial fitting compute a design matrix  with
 
 \begin{equation}
@@ -159,9 +158,9 @@ X_{ij} = y_{i}^j
 
 You should implement this without a single for loop by using vectorization and broadcast. Here $1 \leq j \leq 50$  and $y  = {-20, -19.9, ..., 20}$. Implement code that generates such a matrix.
 
-\problem{15} You are training a logistic regression model. You initialize the parameters with 0’s. Is this a good idea? Explain your answer. 
+\problem{15} You are training a logistic regression model. You initialize the parameters with 0’s. Is this a good idea? Explain your answer.
 
-Imagine you are training a Logistic Regression. There are few parameters 
+Imagine you are training a Logistic Regression. There are few parameters
 
 
 \problem{15}
@@ -175,7 +174,7 @@ What will happen when $y = 1$ and $f(x) = 1$? Will this work in actual implement
 
 
 \problem{extra credit 20} % 8
-In these three examples, find the perceptron weights $w_0, w_1, w_2$ for each of them. 
+In these three examples, find the perceptron weights $w_0, w_1, w_2$ for each of them.
 the line that seperates the two classes is given by the decision boundary that divied into positive and negative classes. (No calculations required, you can simply note the answer.)
 \begin{figure}[H]
   \centering
@@ -183,7 +182,7 @@ the line that seperates the two classes is given by the decision boundary that d
 \end{figure}
 
 \problem{extra credit 20} % 8
-Consider the evaluation of E as given below: 
+Consider the evaluation of E as given below:
 
 \begin{equation}
   E = g(x, y, z) = \sigma(c(ax + by) + dz)
