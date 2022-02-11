@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{bbm}
 \usepackage{float}
+\usepackage{hyperref}
+
 
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -121,10 +123,54 @@ learning problems:
 
 \problem{5} You are working as a Machine Learning Engineer in Metflix Inc. You are building a model to classify users who watch a lot of movies in Ultiverse. What metrics will you choose to evaluate your model?
 
-\problem{5} You are working as a Machine Learning Engineer in Metflix Inc. You are building a model to classify users who watch a lot of movies in Ultiverse. What metrics will you choose to evaluate your model?
-
 \problem{5} Which method is used involved in numerical optimization of an appropriate selection of model criterion? How do you define the error of such estimator? 
 
+\problem{5} Compare the following metrics and explain which one is better.
+
+\begin{enumerate}
+  \item ROC and AUC 
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=1.0\textwidth]{AUC_curve.jpeg}
+      \end{center}
+      \caption{Accuracy}
+    \end{figure}
+  \item For the same figure, explain relevance to True Positive Rate (TPR) and False Positive Rate (FPR)
+\end{enumerate}
+
+
+\problem{7} 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{Two-ROC-curves-A-and-B-with-equal-area-under-the-ROC-curve-However-these-two-ROC.png}
+  \end{center}
+  \caption{Two curves with equal area under the ROC curve}
+\end{figure}
+
+In the above figure we have two ROC curve (A and B) which has the same area under the curve. Which one is better among these two and what governs the area under the curve?
+
+
+\problem{6}
+why is it that technically we're looking for gradient with respect to $W_i$, where $W_i$ is the linear transform (or parameter) matrix (tensor) for each layer. Yet, we are computing $\frac{d(loss)}{d(x)}$, where $x$ is the input. How come?
+
+
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+% \vspace{2px}
+\problem{extra credit 20} % 8
+Learn a simple and efficient procedure for obtaining analytic
+derivatives of complex matrix/vector objectives. Based on the
+exposition in Appendix III of
+\href{https://arxiv.org/abs/1911.04048}{https://arxiv.org/abs/1911.04048}
+manually differentiate the following objective function:
+$$
+\displaystyle \frac{1}{4n(n-1)} \vec{1}^T \log \left( (\vec{x}\odot \vec{x}) \vec{1}^T + \vec{1}(\vec{x}\odot \vec{x})^T - 2\vec{x}\vec{x}^T + \mathbf{I}\right) \vec{1},
+$$
+where $\mathbf{I}$ is the identity matrix, $\vec{1}$ is appropriately
+sized vector of ones, and $\odot$ denotes Hadamard element-wise
+product.
+List each and every one of your step. You may type them down by hand on
+paper very clearly and submit a  photo. {\bf The answer expression for
+  $\dot{\vec{x}}$    must    be   typeset    electronically    though}
 \end{document}
 
 %%% Local Variables:
