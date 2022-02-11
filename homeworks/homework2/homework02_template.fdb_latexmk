@@ -1,11 +1,11 @@
 # Fdb version 3
-["xdvipdfmx"] 1644601100 "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.xdv" "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.pdf" "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template" 1644601723
-  "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.xdv" 1644601100 34960 676a72dd8ad82aa9fbbfe46904479518 "xelatex"
+["xdvipdfmx"] 1644621276 "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.xdv" "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.pdf" "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template" 1644621276
+  "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.xdv" 1644621276 35364 a8eada1bf4c69e8c079cb07d7a454587 "xelatex"
   (generated)
   "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.pdf"
-["xelatex"] 1644601099 "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.tex" "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.xdv" "homework02_template" 1644601723
-  "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.aux" 1644601100 928 70420de6e0fc16634e9c08367e375d87 ""
-  "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.tex" 1644601723 6149 b6e70db3bb7b3b13585a3782a3d49ac8 ""
+["xelatex"] 1644621275 "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.tex" "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.xdv" "homework02_template" 1644621276
+  "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.aux" 1644621276 928 13301ce1448019e45cddcd78a36249cf ""
+  "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.tex" 1644621275 6191 c08acfc8aecb5755aa1730e9107fe623 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -87,13 +87,13 @@
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "AUC_curve.jpeg" 1644554412 442614 9739f8a2e344da07a41bb6d53d3f68c4 ""
   "Two-ROC-curves-A-and-B-with-equal-area-under-the-ROC-curve-However-these-two-ROC.png" 1644600532 42601 12ecff4be8d09a436865bb8376178378 ""
-  "homework02_template.aux" 1644601100 928 70420de6e0fc16634e9c08367e375d87 "xelatex"
-  "homework02_template.out" 1644601100 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "homework02_template.tex" 1644601723 6149 b6e70db3bb7b3b13585a3782a3d49ac8 ""
+  "homework02_template.aux" 1644621276 928 13301ce1448019e45cddcd78a36249cf "xelatex"
+  "homework02_template.out" 1644621276 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "homework02_template.tex" 1644621275 6191 c08acfc8aecb5755aa1730e9107fe623 ""
   (generated)
-  "homework02_template.log"
-  "homework02_template.out"
-  "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.log"
-  "homework02_template.aux"
   "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.xdv"
+  "homework02_template.out"
   "homework02_template.xdv"
+  "/Users/mrinal18/Desktop/Research/Deep_Learning_Catalyst/homeworks/homework2/homework02_template.log"
+  "homework02_template.log"
+  "homework02_template.aux"

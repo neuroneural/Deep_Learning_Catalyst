@@ -72,12 +72,12 @@
 \begin{document}
 
 \Large
-\noindent{\bf CS4851/6851 IDL: Homework 1 \hfill \today}
+\noindent{\bf CS4851/6851 IDL: Homework 2 \hfill \today}
 \medskip\hrule
 
 \vspace{20pt}
 
-Note: All coding problems are to be implemented in a single jupyter notebook.
+Note: All coding problems to be submited with Github Link. Do not Upload the files/folder. Use git commands only.
 
 Note: this is the distribution of questions:
 \begin{enumerate}
@@ -86,9 +86,7 @@ Note: this is the distribution of questions:
   \item Question 9- Question 10: Bonus marks
 \end{enumerate}
 
-\vspace{20pt}
-\noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for undergraduates
-beyond this line
+
 \problem{5} We studies Automatic Differentiation in class. Consider the following function:
 
 \begin{equation}
@@ -121,11 +119,28 @@ learning problems:
 \end{enumerate}
 
 
-\problem{5} You are working as a Machine Learning Engineer in Metflix Inc. You are building a model to classify users who watch a lot of movies in Ultiverse. What metrics will you choose to evaluate your model?
+\problem{10} You are working as a Machine Learning Engineer in Metflix Inc. You are building a model to classify users who watch a lot of movies in Ultiverse. What metrics will you choose to evaluate your model?
 
-\problem{5} Which method is used involved in numerical optimization of an appropriate selection of model criterion? How do you define the error of such estimator? 
+\problem{10} Which method is used involved in numerical optimization of an appropriate selection of model criterion? How do you define the error of such estimator? 
 
-\problem{5} Compare the following metrics and explain which one is better.
+\problem{10} 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{Two-ROC-curves-A-and-B-with-equal-area-under-the-ROC-curve-However-these-two-ROC.png}
+  \end{center}
+  \caption{Two curves with equal area under the ROC curve}
+\end{figure}
+
+In the above figure we have two ROC curve (A and B) which has the same area under the curve. Which one is better among these two and what governs the area under the curve?
+
+
+\problem{20}
+why is it that technically we're looking for gradient with respect to $W_i$, where $W_i$ is the linear transform (or parameter) matrix (tensor) for each layer. Yet, we are computing $\frac{d(loss)}{d(x)}$, where $x$ is the input. How come?
+
+\vspace{20pt}
+\noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for undergraduates beyond this line
+
+\problem{20} Compare the following metrics and explain which one is better.
 
 \begin{enumerate}
   \item ROC and AUC 
@@ -137,21 +152,6 @@ learning problems:
     \end{figure}
   \item For the same figure, explain relevance to True Positive Rate (TPR) and False Positive Rate (FPR)
 \end{enumerate}
-
-
-\problem{7} 
-\begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=1.0\textwidth]{Two-ROC-curves-A-and-B-with-equal-area-under-the-ROC-curve-However-these-two-ROC.png}
-  \end{center}
-  \caption{Two curves with equal area under the ROC curve}
-\end{figure}
-
-In the above figure we have two ROC curve (A and B) which has the same area under the curve. Which one is better among these two and what governs the area under the curve?
-
-
-\problem{6}
-why is it that technically we're looking for gradient with respect to $W_i$, where $W_i$ is the linear transform (or parameter) matrix (tensor) for each layer. Yet, we are computing $\frac{d(loss)}{d(x)}$, where $x$ is the input. How come?
 
 
 \noindent\rule[0.5ex]{\linewidth}{1pt}
