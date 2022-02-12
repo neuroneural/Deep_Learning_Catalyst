@@ -87,26 +87,6 @@ Note: this is the distribution of questions:
 \end{enumerate}
 
 
-\problem{5} We covered Automatic Differentiation in class. Consider the following function:
-
-\begin{equation}
-  f(x, y, z)=   \frac{1}{3} (x_1x_2\sin(x_3) + exp^{x_1x_2})
-\end{equation}
-
-\begin{enumerate}
-  \item Draw a computation graph for this function.
-  \item List the detailed computation steps (the trace) for forward and backward mode of AD. Provide your answers the same way we did in class, by using notations like: 
-      \begin{equation}
-        v_{-2}, v_{-1}, v_{0}, v_{1}, v_{2}
-      \end{equation}
-
-  to get you started:
-  \begin{equation}
-    v_{-2} = 1, \dot{v}_{-2} = \frac{\partial{v_{-2}}}{\partial{x_{-2}}} = 0
-  \end{equation}
-
-  Provide all the steps like this and values for other nodes in computation graph.
-\end{enumerate}
 
 \problem{5} Select the correct option.Accuracy is probably the most commonly used metric in the most common type of Deep 
 learning problems:
@@ -122,6 +102,31 @@ learning problems:
 \problem{10} You are working as a Machine Learning Engineer in Metflix Inc. You are building a model to classify users who watch a lot of movies in Ultiverse. What metrics will you choose to evaluate your model?
 
 \problem{10} Which method is used involved in numerical optimization of an appropriate selection of model criterion? How do you define the error of such estimator? 
+
+\problem{5} We covered Automatic Differentiation in class. Consider the following function:
+
+\begin{equation}
+  f(x, y, z)=   \frac{1}{3} (x_1x_2\sin(x_3) + exp^{x_1x_2})
+\end{equation}
+
+\begin{enumerate}
+  \item Draw a computation graph for this function.
+  \item provide the computation trace of the function 
+  \item provide the forward AD trace for $x_1 = 1$ , $x_2 = 0$, $x_3 = 0$
+  \item provide the reverse mode AD trace for $x_1 = 1$ , $x_2 = 0$, $x_3 = 0$
+  
+\end{enumerate}
+List the detailed computation steps (the trace) for forward and backward mode of AD. Provide your answers the same way we did in class, by using notations like: 
+      \begin{equation}
+        v_{-2}, v_{-1}, v_{0}, v_{1}, v_{2}
+      \end{equation}
+
+  to get you started:
+  \begin{equation}
+    v_{-2} = 1, \dot{v}_{-2} = \frac{\partial{v_{-2}}}{\partial{x_{-2}}} = 0
+  \end{equation}
+
+  Provide all the steps like this and values for other nodes in computation graph.
 
 \problem{10} 
 \begin{figure}[H]
