@@ -7,9 +7,15 @@
 \usepackage{graphicx}
 \usepackage{bbm}
 \usepackage{float}
-\usepackage{hyperref}
-
-
+%\usepackage{hyperref}
+\usepackage{subfig}
+\usepackage[breaklinks=true,colorlinks,citecolor=black,linkcolor=gfGG,urlcolor=gfFP]{hyperref}
+% http://www.colourlovers.com/palette/92095/Giant_Goldfish
+\definecolor{gfCD}{HTML}{69D2E7} % Cloudless Day
+\definecolor{gfSP}{HTML}{A7DBD8} % Sunken Pool
+\definecolor{gfBS}{HTML}{E0E4CC} % Beach Storm
+\definecolor{gfGG}{HTML}{F38630} % Giant Goldfish
+\definecolor{gfFP}{HTML}{FA6900} % Food Pills
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -87,38 +93,44 @@ Note: this is the distribution of questions:
 
 
 
-\problem{20} 
-You have a convolution neural network that takes input image of size $512*512*3$ and passes through a layer that convolves the image using 3 filters of dimensions $5*5*3$ with valid padding.
+\problem{20} You have a convolutional neural network that takes as an
+input image of size $512\times512\times3$ and passes it through a
+layer that convolves the image using 3 filters of dimensions
+$5\times5\times3$ with a valid padding.
 \begin{enumerate}
- \item List down the learnable parameters of this convolution layer.
- \item  What if you want to replicate the behavior of this convolutional layer using a fully connected layer? How many parameters would that fully connected layer have?
+ \item List all learnable parameters of this convolution layer.
+ \item What if you want to replicate the behavior of this convolutional layer using a fully connected layer? How many parameters would that fully connected layer have?
 \end{enumerate}
 
 
-\problem{20} 
-given a binary input image and two filters (below) describe how would you build a detector for
-\begin{figure}[H]
+\problem{20} Given a binary input image of diagonal streaks (see
+example in Figure~\ref{fig:image_example}) and two filters (see
+Figure~\ref{fig:filters}) describe how would you build a detector for
+finding the location of pattern shown in Figure~\ref{fig:Xpattern} on
+the input image. Allowed operations are convolution, summation, and argmax.
+\begin{figure}[ht]
+  \centering
+    \subfloat[Available fixed filters]{
+    \includegraphics[height=4cm]{filters}
+    \label{fig:filters}
+  }
+  \subfloat[Target shape to detect]{
+    \includegraphics[height=4cm]{X}
+    \label{fig:Xpattern}
+  }
+  \caption{Filters to use
+    (\ref{fig:filters}) and pattern to find (\ref{fig:Xpattern}).}
+        \label{fig:xfilters}
+      \end{figure}
+      
+\begin{figure}[t]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{X.png}
+    \includegraphics[width=1.0\textwidth]{pattern}
   \end{center}
-  \caption{detector image}
+  \caption{An example image for the architecture}
+  \label{fig:image_example}
 \end{figure}
 
-with filters:
-\begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=0.4\textwidth]{filter.png}
-  \end{center}
-  \caption{filters for image}
-\end{figure}
-
-on binary image like: 
-\begin{figure}[H]
-  \begin{center}
-    \includegraphics[width=1.0\textwidth]{binary_image.png}
-  \end{center}
-  \caption{filters for image}
-\end{figure}
 \vspace{20pt}
 \noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for undergraduates beyond this line
 
@@ -133,13 +145,18 @@ Demonstrate that convolution is translation invariant for 1D convolution (Note:t
 You have to choose between two papers given below: 
 \begin{enumerate}
   \item Paper 1:
-Read this paper about High-Performance Neural Networks
-for Visual Object Classification: {https://arxiv.org/pdf/1102.0183.pdf}
-(a) Give a short summary of the paper.
-(c) What were the parameter sizes for CIFAR-10 and MNIST?  why do you think the paramtere size differed for CIFAR-10 vs MNIST?
+\href{https://arxiv.org/pdf/1102.0183.pdf}{High-Performance Neural
+  Networks 
+  for Visual Object Classification}:
+
+\begin{enumerate}
+\item Give a short summary of the paper.
+\item What were the parameter sizes for CIFAR-10 and MNIST?  why do you think the paramtere size differed for CIFAR-10 vs MNIST?
+\end{enumerate}
 
 \item Paper 2:
-Read this paper about ImageNet Classification with Deep Convolutional Neural Networks: \url{https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf}
+\href{https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf}{ImageNet
+  Classification with Deep Convolutional Neural Networks}:
 \begin{enumerate}
 \item Give a short summary of the paper.
 \item Why is there a big fluctuation of loss for the last epoch of training?
