@@ -1,0 +1,155 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{dsfont}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{float}
+\usepackage{hyperref}
+
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\setlength{\topmargin}{-.5in} \setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{0in} \setlength{\textwidth}{6.8in}
+
+%\newcommand*{\SOLVE}{}%
+
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\mm}[1]{\mathbf{#1}}
+
+\newcounter{ProblemNum}
+\newcounter{SubProblemNum}[ProblemNum]
+
+\renewcommand{\theProblemNum}{\arabic{ProblemNum}}
+\renewcommand{\theSubProblemNum}{\alph{SubProblemNum}}
+
+\newcommand*{\anyproblem}[1]{\section*{#1}}
+\newcommand*{\problem}[1]{\stepcounter{ProblemNum} %
+   \anyproblem{Problem \theProblemNum \; (#1 points)}}
+\newcommand*{\soln}[1]{\subsection*{#1}}
+\newcommand*{\solution}{\soln{Solution}}
+\newenvironment{solutions}
+  {\section[Solution]{\textcolor{red}{Solution}}\color{red}}
+  {\normalcolor}
+\renewcommand*{\part}{\stepcounter{SubProblemNum} %
+  \soln{Part (\theSubProblemNum)}}
+\renewcommand{\theenumi}{(\alph{enumi})}
+\renewcommand{\labelenumi}{\theenumi}
+\renewcommand{\theenumii}{\roman{enumii}}
+\let\endsection\relax
+\let\endsubsection\relax
+
+\graphicspath{
+{.}
+}
+\lstset{style=mystyle}
+
+\begin{document}
+
+\Large
+\noindent{\bf CS4851/6851 IDL: Homework 2 \hfill \today}
+\medskip\hrule
+
+\vspace{20pt}
+
+Note: All coding problems to be submited with Github Link. Do not Upload the files/folder. Use git commands only.
+
+Note: this is the distribution of questions:
+\begin{enumerate}
+  \item Question 1 to Question6: Required for everyone.
+  \item Question 7: Required only for Graduate Students
+\end{enumerate}
+
+
+
+\problem{20} 
+You have a convolution neural network that takes input image of size $512*512*3$ and passes through a layer that convolves the image using 3 filters of dimensions $5*5*3$ with valid padding.
+\begin{enumerate}
+ \item List down the learnable parameters of this convolution layer.
+ \item  What if you want to replicate the behavior of this convolutional layer using a fully connected layer? How many parameters would that fully connected layer have?
+\end{enumerate}
+
+
+\problem{20} 
+given a binary input image and two filters (below) describe how would you build a detector for
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{X.png}
+  \end{center}
+  \caption{detector image}
+\end{figure}
+
+with filters:
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{filter.png}
+  \end{center}
+  \caption{filters for image}
+\end{figure}
+
+on binary image like: 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{binary_image.png}
+  \end{center}
+  \caption{filters for image}
+\end{figure}
+\vspace{20pt}
+\noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for undergraduates beyond this line
+
+\problem{20}
+Demonstrate that convolution is translation invariant for 1D convolution (Note:this can be extended to N-D convolutions as well).
+
+
+
+\noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for both  undergraduates and graduates beyond this line.
+
+\problem{20}
+You have to choose between two papers given below: 
+\begin{enumerate}
+  \item Paper 1:
+Read this paper about High-Performance Neural Networks
+for Visual Object Classification: {https://arxiv.org/pdf/1102.0183.pdf}
+(a) Give a short summary of the paper.
+(c) What were the parameter sizes for CIFAR-10 and MNIST?  why do you think the paramtere size differed for CIFAR-10 vs MNIST?
+
+\item Paper 2:
+Read this paper about ImageNet Classification with Deep Convolutional Neural Networks: \url{https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf}
+\begin{enumerate}
+\item Give a short summary of the paper.
+\item Why is there a big fluctuation of loss for the last epoch of training?
+\end{enumerate}
+\end{enumerate}
+% \vspace{2px}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
