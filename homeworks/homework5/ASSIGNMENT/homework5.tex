@@ -78,7 +78,7 @@
 \begin{document}
 
 \Large
-\noindent{\bf CS4851/6851 IDL: Homework 3 \hfill \today}
+\noindent{\bf CS4851/6851 IDL\:Homework 5 \hfill \today}
 \medskip\hrule
 
 \vspace{20pt}
@@ -93,15 +93,31 @@ Note: this is the distribution of questions:
 \end{enumerate}
 
 
+\problem{10}
+For each of the following norms, explain what properties will they favor when used in reconstruction error: $L0$, $L1$, and $L2$
 \problem{30}
-Object detection and Object Segmentation are two very important tasks in computer vision. There are many real world applications of these tasks. Take one of these tasks and explain how you would implement it. For example, Image segmentation is used in medical imaging.
-\problem{30}
-how does YOLO (You only Look once) works? What is the the difference between YOLO and Faster-RCNN? 
+Given a set of contrast images with sharp geometric edges (e.g. lithography masks for chip production) write down a formulation for reconstruction error that would work best. Justify your choice.
+
+\problem{20}
+Given a set of images of wild life taken in their natural habitat write down a formulation for reconstruction error that would work best. Justify your choice.
+
+
 \noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for both  undergraduates and graduates beyond this line.
-\problem{40}
-In classification problem, cross entropy typically exhibits a faster convergence times than the alternatives. Consider a binary classification problem with cross binary as a loss. Note, in this case the labels are $y \in {0, 1}$ and network output of a single logistic sigmoid unit represents the conditional distribution of $k = 1$ class given data $P(k = 1 | x)$. Assume the data is i.i.d and write down the negative log liklihood that corresponds to the case when data can be mislabeled with probability $\epsilon$. Make sure that your function reduces to the convolutional cross entropy when $\epsilon = 0$. Discuss the robutness properties if any of your new loss.
-\problem{40} Consider the computational graph in  . Note, that this is a simplfied version of $\textbf{ResNet}$ that we studied in class.  Write down reverse mode trace for this computation without evaluating it at a point to find dy/dx. Describe your observation of the most pronounced property of the final expression. Evaluate the gradient at x = 0. What would happen to the gradient if there was no skip connection from x to y. 
-This exercise is to understand how gradients flow in a skip connection network and how we can encounter vanishing gradient issues if any.
+
+
+\problem{40} Given distributions p and q. If q is parameterized by $\theta$, how would you choose the value for $\theta$ to make q closest to p among all possible q's.
+\begin{enumerate}
+  \item Write down formulation of how would you measure the closeness of $q$ to $p$.
+  \item Explain what you would do to maximize this closeness (i.e. make $q$ and $p$ maximally close, or minimally different or divergent)
+\end{enumerate}
+
+
+\problem{40} Write a report on one of the following topics related to GANS: 
+
+\begin{enumerate}
+  \item  InfoGAN {https://arxiv.org/abs/1606.03657}
+  \item CycleGAN {https://arxiv.org/pdf/1703.10593.pdf}
+\end{enumerate}
 
 % \vspace{2px}
 \end{document}
