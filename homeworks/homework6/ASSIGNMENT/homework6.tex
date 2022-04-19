@@ -106,12 +106,13 @@ We can represent the words in a vocabulary with binary vectors that have dimensi
   \item Provide atleast two more options to fix this problem.
 \end{enumerate}
 \problem{30}
-A recurrent network on the figure takes a sequence of integers as an input and at the end of the sequence, on the last element produces a number between 0 and 1. What does a 0 mean? What does a 1 mean?  Describe which function this network is computing (what is the meaning of this function). Assume all biases are 0, and make sure the hidden state is initialized to 0 as well. Note, the inputs, the weights, and the hidden state are just scalars in this RNN.
+A recurrent network in Figure~\ref{fig:RNN} takes a sequence of integers as an input and at the end of the sequence, on the last element produces a number between 0 and 1. What does a 0 mean? What does a 1 mean?  Describe which function this network is computing (what is the meaning of this function). Assume all biases are 0, and make sure the hidden state is initialized to 0 as well. Note, the inputs, the weights, and the hidden state are just scalars in this RNN.
 \svgsetup{inkscapelatex=false}
 \begin{figure}[!h]
   \centering
-      \includesvg[svgextension=svgz]{RNN.svgz}
-  \caption{test}
+      \includegraphics[width=0.2\linewidth]{RNN}
+      \caption{The RNN for Problem~2 }
+      \label{fig:RNN}
 \end{figure}
 
 \problem{20}
@@ -121,7 +122,7 @@ We have learned about regularization in image processing. How does regularizatio
 \noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for both  undergraduates and graduates beyond this line.
 
 
-\problem{40} How is teacher forcing ratio more accurate than the model output for a sequence of inputs? How can we use teacher process by parallelizing the computation?
+\problem{40} How is teacher forcing ratio more accurate than the model output for a sequence of inputs? How can we use teacher process to parallelize the computation?
 
 
 \problem{40} Write a report on one of the following topics: 
