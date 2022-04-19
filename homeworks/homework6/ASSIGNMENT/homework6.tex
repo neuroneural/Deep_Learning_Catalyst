@@ -88,8 +88,9 @@ Note: All coding problems to be submited with Github Link. Do not Upload the fil
 
 Note: this is the distribution of questions:
 \begin{enumerate}
-  \item Question 1 to Question 3: Required for everyone.
-  \item Question 4 to Question 5:  Bonus question for both Graduate Students and Undergraduate Students
+  \item Question 1 to Question 2: Required for everyone.
+  \item Question 3 and Question 4: Required by Graduate Students and Bonus for Undergrads 
+  \item Question 5 to Question 6:  Bonus question for both Graduate Students and Undergraduate Students
 \end{enumerate}
 
 
@@ -114,6 +115,50 @@ A recurrent network in Figure~\ref{fig:RNN} takes a sequence of integers as an i
       \caption{The RNN for Problem~2 }
       \label{fig:RNN}
 \end{figure}
+
+\vspace{10mm}
+\noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for  undergraduates beyond this line.
+
+
+\problem{20}
+In this problem, you will implement a recurrent neural network which implements binary addition. The inputs are given as binary sequences, starting with
+the least significant binary digit. (It is easier to start from the least significant bit, just like
+how you did addition in grade school.) The sequences will be padded with at least one zero
+on the end. For instance, the problem
+
+\begin{equation}
+  100111 + 110010 = 1011001
+\end{equation}
+
+would be represented as :
+
+\begin{enumerate}
+  \item Input 1: 1, 1, 1, 0, 0, 1, 0
+  \item Input 2: 0, 1, 0, 0, 1, 1, 0
+  \item Correct output: 1, 0, 0, 1, 1, 0, 1
+\end{enumerate}
+
+There are two input units corresponding to the two inputs, and one output unit. Therefore, the pattern of inputs and outputs for this example would be:
+
+\begin{figure}[!h]
+  \centering
+      \includegraphics[width=0.8\linewidth]{RNN_binary.png}
+      \caption{The RNN Binary for Problem~3 }
+      \label{fig:RNN}
+\end{figure}
+
+Design the weights and biases for an RNN which has two input units, three hidden units, and one output unit, which implements binary addition. All of the units use the hard threshold activation function. In particular, specify weight matrices U, V, and W, bias vector bh, and scalar bias by for the following architecture:
+
+\begin{figure}[!h]
+  \centering
+      \includegraphics[width=0.3\linewidth]{RNN_arch.png}
+      \caption{The RNN Architecture for Problem~3 }
+      \label{fig:RNN}
+\end{figure}
+
+Hint: In the grade school algorithm, you add up the values in each column, including the
+carry. Have one of your hidden units activate if the sum is at least 1, the second one if it is
+at least 2, and the third one if it is 3.
 
 \problem{20}
 We have learned about regularization in image processing. How does regularization help in the context of Recurrent Neural Networks?
