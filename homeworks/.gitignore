@@ -7,5 +7,4 @@
 *.aux
 *.gz
 svg-inkscape
-*svgz
 .ipynb_checkpoints/
