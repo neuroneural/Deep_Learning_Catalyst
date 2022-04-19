@@ -1,0 +1,179 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{dsfont}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{float}
+\usepackage{hyperref}
+
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\setlength{\topmargin}{-.5in} \setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{0in} \setlength{\textwidth}{6.8in}
+
+%\newcommand*{\SOLVE}{}%
+
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\mm}[1]{\mathbf{#1}}
+
+\newcounter{ProblemNum}
+\newcounter{SubProblemNum}[ProblemNum]
+
+\renewcommand{\theProblemNum}{\arabic{ProblemNum}}
+\renewcommand{\theSubProblemNum}{\alph{SubProblemNum}}
+
+\newcommand*{\anyproblem}[1]{\section*{#1}}
+\newcommand*{\problem}[1]{\stepcounter{ProblemNum} %
+   \anyproblem{Problem \theProblemNum \; (#1 points)}}
+\newcommand*{\soln}[1]{\subsection*{#1}}
+\newcommand*{\solution}{\soln{Solution}}
+\newenvironment{solutions}
+  {\section[Solution]{\textcolor{red}{Solution}}\color{red}}
+  {\normalcolor}
+\renewcommand*{\part}{\stepcounter{SubProblemNum} %
+  \soln{Part (\theSubProblemNum)}}
+\renewcommand{\theenumi}{(\alph{enumi})}
+\renewcommand{\labelenumi}{\theenumi}
+\renewcommand{\theenumii}{\roman{enumii}}
+\let\endsection\relax
+\let\endsubsection\relax
+
+\graphicspath{
+{.}
+}
+\lstset{style=mystyle}
+
+\begin{document}
+
+\Large
+\noindent{\bf CS4851/6851 IDL: Homework 2 \hfill \today}
+\medskip\hrule
+
+\vspace{20pt}
+
+Note: All coding problems to be submited with Github Link. Do not Upload the files/folder. Use git commands only.
+
+Note: this is the distribution of questions:
+\begin{enumerate}
+  \item Question 1 to Question6: Required for everyone.
+  \item Question 7 - Question 8: Required only for Graduate Students
+\end{enumerate}
+
+
+
+\problem{5} Accuracy is probably the most commonly used metric in
+classification problems. Which statement below is True?:
+
+\begin{enumerate}
+  \item Accuracy is very easy to interpret and is aligned with what you want to measure.
+  \item Accuracy is non-differentiable and cannot be used for direct optimization via gradient descent.
+  \item We want accuracy to count every error as equal.
+  \item If the number of samples in each category is comparable, we cannot make any mistake on the less populated category.
+\end{enumerate}
+
+
+\problem{10} You are working as a Machine Learning Engineer in Metflix Inc. You are building a model to classify users who watch a lot of movies in Ultiverse. What metrics will you choose to evaluate your model?
+
+\problem{10} Which method is used involved in numerical optimization of an appropriate selection of model criterion? How do you define the error of such estimator? 
+
+\problem{5} We covered Automatic Differentiation in class. Consider the following function:
+
+\begin{equation}
+  f(x, y, z)=   \frac{1}{3} (x_1x_2\sin(x_3) + exp^{x_1x_2})
+\end{equation}
+
+\begin{enumerate}
+  \item Draw a computation graph for this function.
+  \item provide the computation trace of the function 
+  \item provide the forward AD trace for $x_1 = 1$ , $x_2 = 0$, $x_3 = 0$
+  \item provide the reverse mode AD trace for $x = 1$ , $y = 0$, $z = 0$
+  
+\end{enumerate}
+List the detailed computation steps (the trace) for forward and backward mode of AD. Provide your answers the same way we did in class, by using notations like: 
+      \begin{equation}
+        v_{-2}, v_{-1}, v_{0}, v_{1}, v_{2}
+      \end{equation}
+
+  to get you started:
+  \begin{equation}
+    v_{-2} = 1, \dot{v}_{-2} = \frac{\partial{v_{-2}}}{\partial{x_{-2}}} = 0
+  \end{equation}
+
+  Provide all the steps like this and values for other nodes in computation graph.
+
+\problem{10} 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{Two-ROC-curves-A-and-B-with-equal-area-under-the-ROC-curve-However-these-two-ROC.png}
+  \end{center}
+  \caption{Two curves with equal area under the ROC curve}
+\end{figure}
+
+In the above figure we have ROC curves for two classifiers (A and B)
+which have equal areas under the curve (AUC).
+\begin{enumerate}
+\item Which classifier is better among these two? (write your detailed
+  thinking)
+\item Describe a situation in which undoubtedly classifier A should be
+  preferred.
+  \item Describe a situation in which undoubtedly classifier B should be
+    preferred.
+    \item  Which factors determine the area under the curve?
+\end{enumerate}
+
+
+
+\problem{20} Technically we need to compute the gradient with respect to $\mathbf{W}_i$, the linear transform (or parameter) matrix (tensor) for layer $i$. Yet, we are computing $\frac{\partial\ell}{\partial\vec{x}}$, gradient of the loss $\ell$ with respect to the input $\vec{x}$. How come?
+
+\vspace{20pt}
+\noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for undergraduates beyond this line
+
+\problem{20} Compare the following metrics and explain which one is better.
+
+\begin{enumerate}
+  \item ROC and AUC 
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=1.0\textwidth]{AUC_curve.jpeg}
+      \end{center}
+      \caption{Accuracy}
+    \end{figure}
+  \item For the same figure, explain relevance to True Positive Rate (TPR) and False Positive Rate (FPR)
+\end{enumerate}
+
+
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+% \vspace{2px}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+
