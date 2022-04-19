@@ -1,10 +1,9 @@
 *.xdv
-*.pdf
+homework*.pdf
 *.out
 *.log
 *.fls
 *.fdb_latexmk
 *.aux
 *.gz
-svg-inkscape
 .ipynb_checkpoints/
