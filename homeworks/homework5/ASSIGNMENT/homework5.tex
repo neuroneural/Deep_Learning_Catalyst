@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{dsfont}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{float}
+%\usepackage{hyperref}
+\usepackage{subfig}
+\usepackage[breaklinks=true,colorlinks,citecolor=black,linkcolor=gfGG,urlcolor=gfFP]{hyperref}
+% http://www.colourlovers.com/palette/92095/Giant_Goldfish
+\definecolor{gfCD}{HTML}{69D2E7} % Cloudless Day
+\definecolor{gfSP}{HTML}{A7DBD8} % Sunken Pool
+\definecolor{gfBS}{HTML}{E0E4CC} % Beach Storm
+\definecolor{gfGG}{HTML}{F38630} % Giant Goldfish
+\definecolor{gfFP}{HTML}{FA6900} % Food Pills
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\setlength{\topmargin}{-.5in} \setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{0in} \setlength{\textwidth}{6.8in}
+
+%\newcommand*{\SOLVE}{}%
+
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\mm}[1]{\mathbf{#1}}
+
+\newcounter{ProblemNum}
+\newcounter{SubProblemNum}[ProblemNum]
+
+\renewcommand{\theProblemNum}{\arabic{ProblemNum}}
+\renewcommand{\theSubProblemNum}{\alph{SubProblemNum}}
+
+\newcommand*{\anyproblem}[1]{\section*{#1}}
+\newcommand*{\problem}[1]{\stepcounter{ProblemNum} %
+   \anyproblem{Problem \theProblemNum \; (#1 points)}}
+\newcommand*{\soln}[1]{\subsection*{#1}}
+\newcommand*{\solution}{\soln{Solution}}
+\newenvironment{solutions}
+  {\section[Solution]{\textcolor{red}{Solution}}\color{red}}
+  {\normalcolor}
+\renewcommand*{\part}{\stepcounter{SubProblemNum} %
+  \soln{Part (\theSubProblemNum)}}
+\renewcommand{\theenumi}{(\alph{enumi})}
+\renewcommand{\labelenumi}{\theenumi}
+\renewcommand{\theenumii}{\roman{enumii}}
+\let\endsection\relax
+\let\endsubsection\relax
+
+\graphicspath{
+{.}
+}
+\lstset{style=mystyle}
+
+\begin{document}
+
+\Large
+\noindent{\bf CS4851/6851 IDL\:Homework 5 \hfill \today}
+\medskip\hrule
+
+\vspace{20pt}
+
+Note: All coding problems to be submited with Github Link. Do not Upload the files/folder. Use git commands only.
+
+Note: this is the distribution of questions:
+\begin{enumerate}
+
+  \item Question 1 to Question 3: Required for everyone.
+  \item Question 4 to Question 5:  Bonus question for both Graduate Students and Undergraduate Students
+\end{enumerate}
+
+
+\problem{10}
+For each of the following norms, explain what properties will they favor when used in reconstruction error: $L_0$, $L_1$, and $L_2$
+\problem{30}
+Given a set of contrast images with sharp geometric edges
+(e.g. photo-lithography masks for microprocessor manufacturing) write down a formulation for reconstruction error that would work best. Justify your choice.
+
+\problem{20}
+Given a set of images of wild life taken in their natural habitat write down a formulation for reconstruction error that would work best. Justify your choice.
+
+\vspace{10mm}
+\noindent\rule[0.5ex]{0.45\linewidth}{1pt} Bonus for both  undergraduates and graduates beyond this line.
+
+
+\problem{40} Given distributions p and q. If q is parameterized by $\theta$, how would you choose the value for $\theta$ to make q closest to p among all possible q's.
+\begin{enumerate}
+  \item Write down formulation of how would you measure the closeness of $q$ to $p$.
+  \item Explain what you would do to maximize this closeness (i.e. make $q$ and $p$ maximally close, or minimally different or divergent)
+\end{enumerate}
+
+
+\problem{40} Write a report on one of the following topics related to GANS: 
+
+\begin{enumerate}
+  \item  InfoGAN {https://arxiv.org/abs/1606.03657}
+  \item CycleGAN {https://arxiv.org/pdf/1703.10593.pdf}
+\end{enumerate}
+
+% \vspace{2px}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:  

@@ -1,0 +1,8 @@
+*aux
+*latexmk
+*fls
+*log 
+*out
+*pdf
+*synctex.gz
+*xdv
